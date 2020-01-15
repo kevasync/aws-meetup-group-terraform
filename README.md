@@ -17,11 +17,13 @@ Configiration files for Terraform Meetup as well as Pulumi typescript stack conv
 * `chmod 400 ~/.ssh/aws-meetup-group-key.pem`
 
 ### Create AWS CLI Account
-* In AWS Portal: IAM > Users > New USer
-* Name, add to admin group, and select configure access credenitals
-![Name User](images/newUser.png "New User")
-![Add User To Group](images/Add User To Group "Add User To Group")
-![Configure Credentials](images/newUserAccessCredentials.png "Configure Credentials")
+IAM > Users > New User
+* Name user
+    - ![Name User](images/newUser.png "New User")
+* Add to group or role with admin privs
+    - ![Add User To Group](images/addUserToGroup.png "Add User To Group")
+* Configure access credenitals
+    - ![Configure Credentials](images/newUserAccessCredentials.png "Configure Credentials")
 
 ### Install AWS CLI
 * Mac: 
