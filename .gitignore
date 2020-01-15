@@ -5,3 +5,4 @@ package-lock.json
 pulumi-iaas-hosting-stack/node_modules
 pulumi-iaas-hosting-stack/*.json
 pulumi-iaas-hosting-stack/*.yaml
+.DS_Store

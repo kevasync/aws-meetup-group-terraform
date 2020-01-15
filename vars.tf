@@ -6,7 +6,7 @@ variable "vpc-base" {
 
 variable "cost-center" {
   type = "string"
-  default = "tinn"
+  default = "aws-meetup-group"
   description = "Cost Center responsible for operational costs"
 }
 
