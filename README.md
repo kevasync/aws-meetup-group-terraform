@@ -46,6 +46,31 @@ IAM > Users > New User
 * Chocolatey (Windows): `choco install terraform`
 * Manual download: [Terraform.IO](https://www.terraform.io/downloads.html)
 
+### TF Hello World file
+```
+provider "aws" {
+  version = "~> 2.0"
+  region  = "us-east-1"
+}
+resource "aws_vpc" "main" {
+  cidr_block = "192.168.225.0/24"
+  enable_dns_support = true
+  enable_dns_hostnames = true
+  tags = {
+    CostCenter = "tf-helloworld"
+  }
+}
+resource "aws_subnet" "main-subnet" {
+  vpc_id     = "${aws_vpc.main.id}"
+  cidr_block = "192.168.225.0/25"
+  availability_zone = "us-east-1a"
+  tags = {
+    CostCenter = "tf-helloworld"
+  }
+}
+```
+
+
 ### Plan, Apply, Show, And Destroy
 * `terraform plan`
 * `terraform apply`
